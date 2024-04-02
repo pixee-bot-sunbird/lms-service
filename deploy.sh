@@ -18,6 +18,7 @@ echo "env:            ${env}"
 echo "org:            ${org}"
 echo "name:           ${name}"
 echo "version:        ${version}"
+echo "number:        ${version}"
 
 ansible-playbook --version
 ansible-playbook -i ansible/inventory/dev ansible/deploy.yml --tags "stack-sunbird" --extra-vars "hub_org=${org} image_name=${name} image_tag=${version}-${artifactLabel}" --vault-password-file /run/secrets/vault-pass
