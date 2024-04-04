@@ -85,7 +85,7 @@ public class PageCacheLoaderService implements Runnable {
     map.remove(JsonKey.CREATED_BY);
     map.remove(JsonKey.UPDATED_DATE);
     map.remove(JsonKey.UPDATED_BY);
-    if ("getPageData".equalsIgnoreCase(from)) {
+    if (from.equalsIgnoreCase("getPageData")) {
       map.remove(JsonKey.STATUS);
     }
   }
